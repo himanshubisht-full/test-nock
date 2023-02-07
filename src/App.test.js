@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('', () => {
+  it('should contain user', async () => {
+    let { container } = render(<App />)
+    expect(container.querySelector('h1').textContent).toBe('Users')
+  })
+})
